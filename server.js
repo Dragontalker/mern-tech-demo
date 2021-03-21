@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 // HTTP request logger
 app.use(morgan('tiny'));
 
-app.get('', (req, res) => {
+app.get('/api/name', (req, res) => {
     const data = {
         userName: 'Richard',
         age: 32
