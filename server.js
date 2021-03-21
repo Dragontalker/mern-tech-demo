@@ -26,3 +26,5 @@ app.get('/api/name', (req, res) => {
     };
     res.json(data);
 });
+
+app.listen(PORT, console.group(`Server is starting at ${PORT}`));
