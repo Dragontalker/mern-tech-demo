@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // HTTP request logger
-app.use(morgan('tiny'));
+app.use(morgan('dev'));
 
 app.get('', (req, res) => {
     const data = {
@@ -27,4 +27,6 @@ app.get('/api/name', (req, res) => {
     res.json(data);
 });
 
-app.listen(PORT, console.group(`Server is starting at ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT} in your browser.`);
+});
