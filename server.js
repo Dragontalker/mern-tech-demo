@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/mern_template';
 
+const routes = require('./routes/api');
+
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -37,6 +39,8 @@ newBlogBost.save((error) => {
 
 // HTTP request logger
 app.use(morgan('dev'));
+app.use('/', routes);
+
 
 
 app.listen(PORT, () => {
