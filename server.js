@@ -41,6 +41,15 @@ const data = {
 // New instace of the model
 const newBlogBost = new BlogPost(data);
 
+// .save();
+newBlogBost.save((error) => {
+    if (error) {
+        console.log('Oops, something happend');
+    } else {
+        console.log('Data has been saved!!');
+    }
+});
+
 // HTTP request logger
 app.use(morgan('dev'));
 
