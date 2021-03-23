@@ -5,7 +5,17 @@ class App extends React.Component {
   state = {
     title: "",
     body: ""
-  }
+  };
+
+  handleChange = (event) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+
+    this.setState({
+      [name]: value
+    });
+  };
 
   render() {
 
@@ -20,7 +30,7 @@ class App extends React.Component {
               name="title"
               placeholder="Title"
               value={this.state.title}
-              onChange={2} 
+              onChange={this.handleChange} 
             />
           </div>
           <div className="form-input">
@@ -30,7 +40,7 @@ class App extends React.Component {
               cols="30" 
               rows="10" 
               value={this.state.body}
-              onChange={2}
+              onChange={this.handleChange}
             ></textarea>
           </div>
 
