@@ -21,7 +21,7 @@ mongoose.connection.on('connected', () => {
 
 // HTTP request logger
 app.use(morgan('dev'));
-app.use('/', routes);
+app.use('/api', routes);
 
 app.listen(PORT, () => {
     console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT} in your browser.`);
