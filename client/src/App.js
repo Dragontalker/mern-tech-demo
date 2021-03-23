@@ -17,6 +17,15 @@ class App extends React.Component {
     });
   };
 
+  submit = (event) => {
+    event.preventDefault();
+
+    const payload = {
+      title: this.state.title,
+      body: this.state.body
+    }
+  };
+
   render() {
 
     console.log('State: ', this.state);
@@ -25,7 +34,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to my App</h2>
-        <form>
+        <form onSubmit={this.submit}>
           <div className="form-input">
             <input
               type="text"
