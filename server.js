@@ -14,7 +14,7 @@ mongoose.connect(MONGODB_URI, {
 });
 
 mongoose.connection.on('connected', () => {
-    console.log('Mongoose is connected!!!');
+    console.log('==> 🌱  MongoDB is connected.');
 });
 
 // HTTP request logger
