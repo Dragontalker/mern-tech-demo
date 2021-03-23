@@ -17,21 +17,6 @@ mongoose.connection.on('connected', () => {
     console.log('==> 🌱  MongoDB is connected.');
 });
 
-// Schema
-const Schema = mongoose.Schema;
-
-const BlogPostSchema = new Schema({
-    title: String,
-    body: String,
-    date: {
-        type: String,
-        default: Date.now()
-    }
-});
-
-// Model
-const BlogPost = mongoose.model('BlogPost', BlogPostSchema);
-
 // Saving data to our mongo database
 const data = {
     title: 'Testing 1',
