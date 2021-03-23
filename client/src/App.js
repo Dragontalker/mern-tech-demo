@@ -2,8 +2,12 @@ import React from 'react';
 
 class App extends React.Component {
 
-  render() {
+  state = {
+    title: "",
+    body: ""
+  }
 
+  render() {
 
     //JSX
     return (
@@ -15,7 +19,7 @@ class App extends React.Component {
               type="text"
               name="title"
               placeholder="Title"
-              value=""
+              value={this.state.title}
               onChange={2} 
             />
           </div>
@@ -25,7 +29,7 @@ class App extends React.Component {
               placeholder="Body"
               cols="30" 
               rows="10" 
-              value=""
+              value={this.state.body}
               onChange={2}
             ></textarea>
           </div>
