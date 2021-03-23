@@ -18,7 +18,17 @@ class App extends React.Component {
               onChange={} 
             />
           </div>
-          <div className="form-input"></div>
+          <div className="form-input">
+            <textarea 
+              name="body" 
+              cols="30" 
+              rows="10" 
+              value=""
+              onChange={}
+            ></textarea>
+          </div>
+
+          <button>Submit</button>
         </form>
       </div>
     )
