@@ -1,7 +1,7 @@
 const express = require('express');
 const BlogPost = require('../models/blogPost');
 
-const router = express.router();
+const router = express.Router();
 
 router.get('/api', (req, res) => {
     BlogPost.find({})
