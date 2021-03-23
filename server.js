@@ -53,12 +53,15 @@ newBlogBost.save((error) => {
 // HTTP request logger
 app.use(morgan('dev'));
 
-app.get('', (req, res) => {
-    const data = {
-        userName: 'Richard',
-        age: 32
-    };
-    res.json(data);
+app.get('/api', (req, res) => {
+    BlogPost.find({})
+        .then((data) => {
+            console.log(`Data: ${data}`);
+            res.json(data);
+        })
+        .catch((error) => {
+            console.log(`Error: ${error}`);
+        });
 });
 
 app.get('/api/name', (req, res) => {
