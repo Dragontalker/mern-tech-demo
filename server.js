@@ -17,6 +17,17 @@ mongoose.connection.on('connected', () => {
     console.log('==> 🌱  MongoDB is connected.');
 });
 
+// Schema
+const Schema = mongoose.Schema;
+const BlogPostSchema = new Schema({
+    title: String,
+    body: String,
+    date: {
+        type: String,
+        default: Date.now()
+    }
+});
+
 // HTTP request logger
 app.use(morgan('dev'));
 
