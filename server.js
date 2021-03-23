@@ -12,6 +12,10 @@ mongoose.connect('mongodb://localhost/mern_template', {
     useUnifiedTopology: true
 });
 
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose is connected!!!');
+});
+
 // HTTP request logger
 app.use(morgan('dev'));
 
