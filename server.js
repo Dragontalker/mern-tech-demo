@@ -38,6 +38,9 @@ const data = {
     body: 'This is the first data entry of testing database.'
 };
 
+// New instace of the model
+const newBlogBost = new BlogPost(data);
+
 // HTTP request logger
 app.use(morgan('dev'));
 
