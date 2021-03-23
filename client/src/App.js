@@ -14,17 +14,19 @@ class App extends React.Component {
             <input
               type="text"
               name="title"
+              placeholder="Title"
               value=""
-              onChange={} 
+              onChange={2} 
             />
           </div>
           <div className="form-input">
             <textarea 
               name="body" 
+              placeholder="Body"
               cols="30" 
               rows="10" 
               value=""
-              onChange={}
+              onChange={2}
             ></textarea>
           </div>
 
