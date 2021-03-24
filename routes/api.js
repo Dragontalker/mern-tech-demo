@@ -26,12 +26,12 @@ router.post('/save', (req, res) => {
             res.status(500).json({
                 msg: 'Sorry, internal servor errors'
             });
-        } else {
-            // BlogPost
-            res.json({
-                msg: 'Your data has been saved!!!'
-            });
+            return;
         }
+        // BlogPost
+        return res.json({
+            msg: 'Your data has been saved!!!'
+        });
     });
 });
 
